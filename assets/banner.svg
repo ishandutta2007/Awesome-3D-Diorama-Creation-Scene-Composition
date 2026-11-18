@@ -1,0 +1,217 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#030712" />
+    </linearGradient>
+
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="40%" stop-color="#818cf8" />
+      <stop offset="80%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#f472b6" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#312e81" stop-opacity="0.5" />
+    </linearGradient>
+
+    <linearGradient id="accentGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Isometric Cube Gradients -->
+    <linearGradient id="cubeTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="cubeLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0369a1" />
+      <stop offset="100%" stop-color="#075985" />
+    </linearGradient>
+    <linearGradient id="cubeRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c4a6e" />
+      <stop offset="100%" stop-color="#082f49" />
+    </linearGradient>
+
+    <linearGradient id="cubePinkTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f472b6" />
+      <stop offset="100%" stop-color="#db2777" />
+    </linearGradient>
+    <linearGradient id="cubePinkLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#be185d" />
+      <stop offset="100%" stop-color="#9d174d" />
+    </linearGradient>
+    <linearGradient id="cubePinkRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#831843" />
+      <stop offset="100%" stop-color="#500724" />
+    </linearGradient>
+
+    <!-- Glowing Grid Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .glow-orb {
+      animation: floatOrb 8s ease-in-out infinite alternate;
+    }
+    .iso-stage {
+      animation: floatStage 6s ease-in-out infinite alternate;
+    }
+    .pill-float {
+      animation: floatPill 5s ease-in-out infinite alternate;
+    }
+    .pulse-particle {
+      animation: pulseLight 3s ease-in-out infinite alternate;
+    }
+    .grid-line {
+      stroke: #334155;
+      stroke-opacity: 0.25;
+      stroke-dasharray: 4 4;
+    }
+
+    @keyframes floatStage {
+      0% { transform: translateY(0px) rotate(0deg); }
+      100% { transform: translateY(-10px) rotate(0.5deg); }
+    }
+    @keyframes floatOrb {
+      0% { transform: translate(0px, 0px) scale(1); opacity: 0.4; }
+      100% { transform: translate(30px, -20px) scale(1.15); opacity: 0.7; }
+    }
+    @keyframes floatPill {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-6px); }
+    }
+    @keyframes pulseLight {
+      0% { opacity: 0.3; }
+      100% { opacity: 0.9; }
+    }
+  </style>
+
+  <!-- Deep Backdrop -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)" />
+
+  <!-- Animated Glowing Background Orbs (Behind content) -->
+  <circle class="glow-orb" cx="180" cy="120" r="140" fill="url(#accentGlow)" filter="url(#glow)" />
+  <circle class="glow-orb" cx="1020" cy="220" r="180" fill="#a855f7" opacity="0.18" filter="url(#glow)" style="animation-delay: -3s;" />
+  <circle class="glow-orb" cx="600" cy="380" r="130" fill="#ec4899" opacity="0.12" filter="url(#glow)" style="animation-delay: -5s;" />
+
+  <!-- Subtle Perspective Grid in Background -->
+  <g class="grid-line">
+    <line x1="0" y1="360" x2="1200" y2="360" />
+    <line x1="0" y1="390" x2="1200" y2="390" />
+    <line x1="150" y1="320" x2="50" y2="420" />
+    <line x1="350" y1="320" x2="300" y2="420" />
+    <line x1="550" y1="320" x2="550" y2="420" />
+    <line x1="750" y1="320" x2="800" y2="420" />
+    <line x1="950" y1="320" x2="1050" y2="420" />
+    <line x1="1150" y1="320" x2="1250" y2="420" />
+  </g>
+
+  <!-- Animated Isometric Diorama Floating Stage (Side Decor - Right) -->
+  <g class="iso-stage" transform="translate(940, 190)">
+    <!-- Main Diorama Base Slab -->
+    <!-- Top Face -->
+    <polygon points="0,-40 90,10 0,60 -90,10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+    <!-- Left Face -->
+    <polygon points="-90,10 0,60 0,90 -90,40" fill="#0f172a" stroke="#0284c7" stroke-width="1.5" />
+    <!-- Right Face -->
+    <polygon points="0,60 90,10 90,40 0,90" fill="#020617" stroke="#0369a1" stroke-width="1.5" />
+
+    <!-- Isometric Small Building Cube 1 -->
+    <polygon points="-30,-15 0,0 -30,15 -60,0" fill="url(#cubeTop)" />
+    <polygon points="-60,0 -30,15 -30,45 -60,30" fill="url(#cubeLeft)" />
+    <polygon points="-30,15 0,0 0,30 -30,45" fill="url(#cubeRight)" />
+
+    <!-- Isometric Small Tower Cube 2 -->
+    <polygon points="20,-25 50,-10 20,5 -10,-10" fill="url(#cubePinkTop)" />
+    <polygon points="-10,-10 20,5 20,35 -10,20" fill="url(#cubePinkLeft)" />
+    <polygon points="20,5 50,-10 50,20 20,35" fill="url(#cubePinkRight)" />
+
+    <!-- Miniature Mini-Voxel Accent -->
+    <polygon points="5,-50 20,-42 5,-35 -10,-42" fill="#34d399" />
+    <polygon points="-10,-42 5,-35 5,-22 -10,-29" fill="#059669" />
+    <polygon points="5,-35 20,-42 20,-29 5,-22" fill="#047857" />
+
+    <!-- Floating Sparkles around Diorama -->
+    <circle cx="-50" cy="-60" r="3" fill="#67e8f9" class="pulse-particle" />
+    <circle cx="70" cy="-40" r="2.5" fill="#f472b6" class="pulse-particle" style="animation-delay: -1s;" />
+    <circle cx="10" cy="-75" r="2" fill="#fde047" class="pulse-particle" style="animation-delay: -2s;" />
+  </g>
+
+  <!-- Animated Isometric Low-Poly Mini Base (Left Decor) -->
+  <g class="iso-stage" transform="translate(130, 290)" style="animation-delay: -2.5s;">
+    <!-- Small Isometric Slab -->
+    <polygon points="0,-25 50,5 0,35 -50,5" fill="#1e1b4b" stroke="#818cf8" stroke-width="1.2" />
+    <polygon points="-50,5 0,35 0,55 -50,25" fill="#0f0e26" stroke="#6366f1" stroke-width="1.2" />
+    <polygon points="0,35 50,5 50,25 0,55" fill="#060515" stroke="#4f46e5" stroke-width="1.2" />
+    <!-- Voxel Block on Top -->
+    <polygon points="0,-15 20,-5 0,5 -20,-5" fill="#a855f7" />
+    <polygon points="-20,-5 0,5 0,20 -20,10" fill="#7e22ce" />
+    <polygon points="0,5 20,-5 20,10 0,20" fill="#581c87" />
+  </g>
+
+  <!-- FOREGROUND CONTENT: Header, Badges, Title, Subtitle, Feature Pills -->
+  <g transform="translate(100, 0)">
+    
+    <!-- Category Pill Tag -->
+    <g transform="translate(0, 52)">
+      <rect x="0" y="0" width="280" height="28" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1" />
+      <circle cx="14" cy="14" r="5" fill="#38bdf8" class="pulse-particle" />
+      <text x="28" y="18" fill="#7dd3fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="1">CURATED 3D ECOSYSTEM</text>
+    </g>
+
+    <!-- Main Title (Strictly Foreground, Crystal Clear) -->
+    <text x="0" y="130" fill="url(#titleGrad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif" font-size="44" font-weight="900" letter-spacing="-0.5">Awesome 3D Diorama Creation</text>
+    <text x="0" y="180" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif" font-size="34" font-weight="700" letter-spacing="-0.3">&amp; Scene Composition</text>
+
+    <!-- Subtitle / Mission Statement -->
+    <text x="0" y="222" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="400">
+      SaaS Platforms • Open-Source Engines • Voxel Worlds • Low-Poly Staging • WebGL/WebGPU
+    </text>
+
+    <!-- Floating Dynamic Feature Pills (Non-Obstructing) -->
+    <g class="pill-float" transform="translate(0, 260)">
+      <!-- Pill 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="135" height="34" rx="17" fill="#1e293b" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1.2" />
+        <text x="67" y="21" fill="#bae6fd" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600" text-anchor="middle">✨ WebGL / WebGPU</text>
+      </g>
+      <!-- Pill 2 -->
+      <g transform="translate(150, 0)">
+        <rect width="125" height="34" rx="17" fill="#1e293b" stroke="#a855f7" stroke-opacity="0.3" stroke-width="1.2" />
+        <text x="62" y="21" fill="#e9d5ff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600" text-anchor="middle">🧊 Voxel Builders</text>
+      </g>
+      <!-- Pill 3 -->
+      <g transform="translate(290, 0)">
+        <rect width="145" height="34" rx="17" fill="#1e293b" stroke="#ec4899" stroke-opacity="0.3" stroke-width="1.2" />
+        <text x="72" y="21" fill="#fbcfe8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600" text-anchor="middle">🎨 Stylized Dioramas</text>
+      </g>
+      <!-- Pill 4 -->
+      <g transform="translate(450, 0)">
+        <rect width="140" height="34" rx="17" fill="#1e293b" stroke="#10b981" stroke-opacity="0.3" stroke-width="1.2" />
+        <text x="70" y="21" fill="#a7f3d0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600" text-anchor="middle">🤖 AI Scene Synth</text>
+      </g>
+      <!-- Pill 5 -->
+      <g transform="translate(605, 0)">
+        <rect width="125" height="34" rx="17" fill="#1e293b" stroke="#f59e0b" stroke-opacity="0.3" stroke-width="1.2" />
+        <text x="62" y="21" fill="#fde68a" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600" text-anchor="middle">📐 Low-Poly CAD</text>
+      </g>
+    </g>
+
+    <!-- Bottom Metrics / Key Indicators -->
+    <g transform="translate(0, 325)">
+      <text x="0" y="0" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="500">
+        Curated by <tspan fill="#38bdf8" font-weight="600">@ishandutta2007</tspan> • Free Forever &amp; Open-Source Focus • Updated for 2026
+      </text>
+    </g>
+
+  </g>
+</svg>
