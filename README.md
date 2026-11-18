@@ -56,9 +56,9 @@ The following hosted platforms and cloud-native 3D scene studios provide real-ti
 
 Curated open-source projects, game engines, voxel editors, WebGL visual composers, and declarative diorama toolkits.
 
-*Sorted descending by repository GitHub star count.*
+*Sorted descending by repository GitHub Stars_Count.*
 
-| Project | Stars | License | Description |
+| Project | GitHub_Stars | License | Description |
 | :--- | :--- | :--- | :--- |
 | **[godotengine/godot](https://github.com/godotengine/godot)** | [![Stars](https://img.shields.io/github/stars/godotengine/godot?style=social&color=white)](https://github.com/godotengine/godot/stargazers) | `MIT` | Multi-platform 2D and 3D game engine equipped with GridMap tile/diorama placement, CSG prototyping, volumetric fog, and real-time SDFGI lighting. |
 | **[mrdoob/three.js](https://github.com/mrdoob/three.js)** | [![Stars](https://img.shields.io/github/stars/mrdoob/three.js?style=social&color=white)](https://github.com/mrdoob/three.js/stargazers) | `MIT` | Foundational JavaScript 3D library featuring the browser-based **Three.js Editor** for staging lights, materials, cameras, post-processing, and exporting glTF dioramas. |
@@ -109,7 +109,7 @@ Contributions are welcome! To contribute to this curated ecosystem:
 
 1. 🍴 Fork the repository.
 2. 📝 Add your recommended platform or project to `README.md` following the existing tabular schema.
-3. 🏷️ Ensure all links, licenses, pricing specifics, and GitHub star badges are accurate.
+3. 🏷️ Ensure all links, licenses, pricing specifics, and GitHub Stars_Badges are accurate.
 4. 🚀 Submit a Pull Request with a clear description of why the tool is a great addition.
 
 ---
